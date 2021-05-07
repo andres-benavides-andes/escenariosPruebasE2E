@@ -1,0 +1,147 @@
+[
+  {
+    "uri": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/escenariose2e/./features/my_first.feature",
+    "id": "shared-board-connection",
+    "keyword": "Feature",
+    "name": "Shared board connection",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "shared-board-connection;creaar-un-post",
+        "keyword": "Scenario",
+        "name": "Creaar un post",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@user1",
+            "line": 3
+          },
+          {
+            "name": "@web",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/web/support/app_life_cycle_hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 243471
+            }
+          },
+          {
+            "match": {
+              "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1450706182
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I navigate to page \"http://localhost:2368/ghost/",
+            "line": 5,
+            "match": {
+              "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/escenariose2e/./features/my_first.feature:5"
+            },
+            "result": {
+              "status": "undefined"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I enter \"andre0190@gmail.com\" into input field having id \"ember8\"",
+            "line": 6,
+            "match": {
+              "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I enter \"andres1503\" into input field having id \"ember10\"",
+            "line": 7,
+            "match": {
+              "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I click on element having css selector \"button#ember12\"",
+            "line": 8,
+            "match": {
+              "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:50"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "/home/andres/Documentos/estudiacion/ciclo-2/pruebas/semana5/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/web/support/app_life_cycle_hooks.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 342486
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
