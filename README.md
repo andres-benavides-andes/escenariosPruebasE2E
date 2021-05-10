@@ -1,3 +1,11 @@
+
+# Requerimientos de ejecucion
+Se debe tener corriendo localmente a ghost en la direccion http://localhost:2368/
+
+Se debe modificar el archivo config.json con el email y la password del usuario administrador del ghost en ejecucion
+
+El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
+
 # Funcionalidades Core
 ## Funcionalidad Asociar TAG
 ### Esenarios de prueba
@@ -58,10 +66,3 @@
     Then I validate that tag "testtag" is associate with a page
     Then I delete the page with the title "My new Page"
     Then I delete the tag with the slug "testtag"
-
-### Requerimientos de ejecucion
-Se debe tener corriendo localmente a ghost en la direccion http://localhost:2368/
-
-Se debe modificar el archivo config.json con el email y la password del usuario administrador
-
-El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
