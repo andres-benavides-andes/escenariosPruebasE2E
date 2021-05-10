@@ -61,5 +61,7 @@
 
 ### Requerimientos de ejecucion
 Se debe tener corriendo localmente a ghost en la direccion http://localhost:2368/
+
 Se debe modificar el archivo config.json con el email y la password del usuario administrador
+
 El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
