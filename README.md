@@ -6,6 +6,14 @@ Se debe modificar el archivo config.json con el email y la password del usuario 
 
 El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
 
+# Equipo
+|Integrante|email|
+|-------------------|-------------|
+|Miguel Camargo|ma.camargo45@uniandes.edu.co|
+|Anderson Luis Cáceres Padilla|al.caceres@uniandes.edu.co|
+|Andres Benavides|f.benavidesv@uniandes.edu.co|
+|Anderson Steve Santamaría Ballesteros|as.santamaria@uniandes.edu.co|
+
 # Funcionalidades Core
 ## Funcionalidad Asociar TAG
 ### Esenarios de prueba
