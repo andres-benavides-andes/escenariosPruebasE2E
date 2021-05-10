@@ -1,6 +1,6 @@
-### Funcionalidades Core
-## Asociar TAG
-# Esenarios de prueba
+# Funcionalidades Core
+## Funcionalidad Asociar TAG
+### Esenarios de prueba
   Scenario: Associate a tag to a post
     Given I log in ghost local app as an administrator with this user "<EMAIL>" and password "<PASSWORD>"
     Then I create a tag with the name  "testtag", and the description "This is a sample tast"
@@ -59,7 +59,7 @@
     Then I delete the page with the title "My new Page"
     Then I delete the tag with the slug "testtag"
 
-# Requerimientos de ejecucion
+### Requerimientos de ejecucion
 Se debe tener corriendo localmente a ghost en la direccion http://localhost:2368/
 Se debe modificar el archivo config.json con el email y la password del usuario administrador
 El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
