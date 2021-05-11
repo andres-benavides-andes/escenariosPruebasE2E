@@ -6,6 +6,11 @@ Se debe modificar el archivo config.json con el email y la password del usuario 
 
 El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
 
+Este repositorio se debe clonar en el mismo nivel de la ubicacion donde esta el directorio de Kraken-mobil
+
+Despues de clonar el repositorio se debe ingresar a la carpeta y ejecutar el comando bundle install
+
+
 # Equipo
 
 | Integrante                            | email                         |
@@ -17,7 +22,7 @@ El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionad
 
 # Ejecutar las pruebas
 
-Primero editar el archivo: /config.json y poner las credenciales del ghost local
+Primero editar el archivo: ./config.json y poner las credenciales del usuario de ghost local
 
 Luego ejecutar este comado:
 
@@ -118,3 +123,14 @@ Editar url de un post: Logearse en Ghost → darle click a la seccion de ‘Post
 Eliminar Post: Logearse en Ghost → darle click a la seccion de ‘Posts’ → darle click a cualquier post del listado para editar → Dar click en el boton de settings → Dar click en el boton delete post → Darle click al botón de confirmacion para boprrar el post → entonces la vista vuelve a la lista donde están todos los posts.
 
 Editar Excerpt: Logearse en Ghost → darle click a la seccion de ‘Posts’ → darle click a cualquier post del listado para editar → Dar click en el boton de settings → Editar el valor del input Excerpt → Darle click al botón para volver a los posts → entonces la vista vuelve a la lista donde están todos los posts.
+
+## Funcionalidades Crear post
+### Esenarios de prueba
+
+<strong>Crear un post:</strong> Logearse en Ghost → darle clic al botón de agregar post → Escribir un titulo en el campo de titulo y escribir algo en el campo para el contenido del post -> Darle clic al botón para volver a los posts → entonces la vista vuelve a la lista donde están todos los posts
+
+<strong>Publicar un post:</strong> Logearse en Ghost → darle clic al botón de agregar post → Escribir un titulo en el campo de titulo y escribir algo en el campo para el contenido del post -> Darle clic a las opciones de publicar → seleccionar la opción de “set it live now” → darle clic al botón de publicar → entonces puedo ver el mensaje de publicado
+
+<strong>Publicar un post solo para miembros:</strong> Logearse en Ghost → darle clic al botón de agregar post → Escribir un titulo en el campo de titulo y escribir algo en el campo para el contenido del post    -> Darle clic a la configuración del post → en el select de Post access seleccionar Members Only→ cerrar las configuraciones del post → Darle clic a las opciones de publicar → seleccionar la opción de “set it live now” → darle clic al botón de publicar → entonces puedo ver el mensaje de publicado
+
+<strong>Ver el preview de una post:</strong>  Logearse en Ghost → darle clic al botón de agregar post → Escribir un titulo en el campo de titulo y escribir algo en el campo para el contenido del post -> Darle clic al botón de preview  → entonces se carga una vista donde se encuentra una etiqueta h1 con la clase artivle-title y el texto que se escribió en el titulo. 
