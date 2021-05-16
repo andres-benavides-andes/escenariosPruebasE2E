@@ -139,10 +139,10 @@ Editar Excerpt: Logearse en Ghost → darle click a la seccion de ‘Posts’ �
 
 ## Requerimientos de ejecucion de script de prueba
 
-El script de pruebas se hizo utilizando las siguientes versiones de nodejs y npm:
+El script de pruebas se hizo utilizando las siguientes versiones de nodejs y npm:<br/>
 
-node v12.20.1
-npm 6.14.10
+node v12.20.1<br/>
+npm 6.14.10<br/>
 
 Se recomineda usar las mismas versiones, o versiones superiores para su ejecucion.
 
