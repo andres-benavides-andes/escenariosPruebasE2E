@@ -1,0 +1,31 @@
+{
+    "options":{
+        "output": {
+            "errorColor": {
+                "red": 255,
+                "green": 0,
+                "blue": 255
+            },
+            "errorType": "movement",
+            "largeImageThreshold": 1200,
+            "useCrossOrigin": false,
+            "outputDiff": true
+        },
+        "scaleToSameSize": true,
+        "ignore": "antialiasing"
+    },
+    "regressionCases": [
+        {
+            "feature": "Tag Association",
+            "scenario": "Associate 3 tags to a post",
+            "before":"../tvr/3.3.0/Associate 3 tags to a post",
+            "after":"../tvr/3.42.5/Associate 3 tags to a post"
+        },
+        {
+            "feature":"Tag Association",
+            "scenario": "Assosiate a tag to 2 posts",
+            "before": "../tvr/3.3.0/Assosiate a tag to 2 posts",
+            "after": "../tvr/3.42.5/Assosiate a tag to 2 posts"
+        }
+    ]
+}
