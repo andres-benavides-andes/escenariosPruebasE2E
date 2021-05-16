@@ -23,7 +23,28 @@ if ENV["ADB_DEVICE_ARG"].nil?
     @driver.navigate.to $url_variable
     sleep 2
   end
-  
+
+  Given(/^I have a version "([^\"]*)"$/) do |versionapp|
+    $versionapp = versionapp
+  end
+
+  AfterStep do |_scenario|
+    if $id > 0
+      Dir.mkdir("./tvr") unless File.exist?("./tvr")
+      Dir.mkdir("./tvr/#{$versionapp}") unless File.exist?("./tvr/#{$versionapp}")
+      Dir.mkdir("./tvr/#{$versionapp}/#{$featurescenariostep}") unless File.exist?("./tvr/#{$versionapp}/#{$featurescenariostep}")
+      path = "./tvr/#{$versionapp}/#{$featurescenariostep}/#{$featurescenariostep}_#{$id}.png"
+      @driver.save_screenshot(path)
+      embed(path, 'image/png', File.basename(path))
+    end
+    $id += 1
+  end
+
+# Steps for Tag association feature-----------------------------------------------------
+
+  $delay1 = 0.5
+  $delay2 = $delay1*2
+
   def waitTo(css_selector)
     wait = Selenium::WebDriver::Wait.new(timeout: 10)
     wait.until { @driver.find_element(css: css_selector) }
@@ -49,7 +70,7 @@ if ENV["ADB_DEVICE_ARG"].nil?
     clickOn(css_selector)
   end
 
-  Given(/^I log in ghost local app as an administrator with this user (.*?) and password (.*?) $/) do |userName, password|
+  When(/^I log in ghost local app as an administrator with this user "(.*?)" and password "(.*?)"$/) do |userName, password|
     @driver.navigate.to "http://localhost:2368/ghost/#/signin"
     waitTo('input[name="identification"]')
     fill_a_text_field('input[name="identification"]', userName )
@@ -58,7 +79,7 @@ if ENV["ADB_DEVICE_ARG"].nil?
     waitTo('a[href="#/tags/"]') #just waithing until the page display after log in
   end
 
-  Then(/^I log in ghost local app as an administrator$/) do
+  When(/^I log in ghost local app as an administrator$/) do
     @driver.navigate.to "http://localhost:2368/ghost/#/signin"
     waitTo('input[name="identification"]')
     fill_a_text_field('input[name="identification"]', 'jhon@example.com')
@@ -81,7 +102,7 @@ if ENV["ADB_DEVICE_ARG"].nil?
     waitTo('a[href="#/tags/new/"]')
     waitAndClick('a[href="#/tags/'+ tagSlug +'/"]')
     waitAndClick('button[class="gh-btn gh-btn-red gh-btn-icon mb15"]')
-    sleep 1
+    sleep $delay2
     waitAndClick('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]')
   end
 
@@ -90,9 +111,9 @@ if ENV["ADB_DEVICE_ARG"].nil?
     waitAndClick('a[href="#/editor/post/"]')
     waitAndFill('textarea[placeholder="Post Title"]', postTitle)
     fill_a_text_field('div[data-placeholder="Begin writing your post..."]', "")
-    sleep 0.5
+    sleep $delay1
     waitAndClick('a[href="#/posts/"]')
-    sleep 0.5
+    sleep $delay1
   end
 
   Then(/^I create a draf page with the title "(.*?)"$/) do |pageTitle|
@@ -100,9 +121,9 @@ if ENV["ADB_DEVICE_ARG"].nil?
     waitAndClick('a[href="#/editor/page/"]')
     waitAndFill('textarea[placeholder="Page Title"]', pageTitle)
     fill_a_text_field('div[data-placeholder="Begin writing your page..."]', "")
-    sleep 0.5
+    sleep $delay1
     waitAndClick('a[href="#/pages/"]')
-    sleep 0.5
+    sleep $delay1
   end
 
   Then(/^I delete the post with the title "(.*?)"$/) do |postTitle|
@@ -111,9 +132,9 @@ if ENV["ADB_DEVICE_ARG"].nil?
     element = @driver.find_elements(css: 'a > h3').select {|el| el.text == postTitle }.first
     element.click
     waitAndClick('button.post-settings')
-    sleep 0.5
+    sleep $delay1
     waitAndClick('button.settings-menu-delete-button')
-    sleep 1
+    sleep $delay2
     waitAndClick('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]')
   end
 
@@ -123,9 +144,9 @@ if ENV["ADB_DEVICE_ARG"].nil?
     element = @driver.find_elements(css: 'a > h3').select {|el| el.text == pageTitle }.first
     element.click
     waitAndClick('button.post-settings')
-    sleep 0.5
+    sleep $delay1
     waitAndClick('button.settings-menu-delete-button')
-    sleep 1
+    sleep $delay2
     waitAndClick('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]')
   end
 
@@ -135,15 +156,15 @@ if ENV["ADB_DEVICE_ARG"].nil?
     element = @driver.find_elements(css: 'a > h3').select {|el| el.text == postTitle }.first
     element.click
     waitAndClick('button.post-settings')
-    sleep 0.5
+    sleep $delay1
     element = @driver.find_element(id: 'tag-input')
     element.send_keys tagName
     element.send_keys :enter
     waitAndClick('button.close')
     waitAndClick('div.gh-publishmenu-trigger')
-    sleep 1
+    sleep $delay2
     waitAndClick('button.gh-publishmenu-button')
-    sleep 0.5
+    sleep $delay1
     waitAndClick('a[href="#/posts/"]')
   end
 
@@ -153,15 +174,15 @@ if ENV["ADB_DEVICE_ARG"].nil?
     element = @driver.find_elements(css: 'a > h3').select {|el| el.text == pageTitle }.first
     element.click
     waitAndClick('button.post-settings')
-    sleep 0.5
+    sleep $delay1
     element = @driver.find_element(id: 'tag-input')
     element.send_keys tagName
     element.send_keys :enter
     waitAndClick('button.close')
     waitAndClick('div.gh-publishmenu-trigger')
-    sleep 1
+    sleep $delay2
     waitAndClick('button.gh-publishmenu-button')
-    sleep 0.5
+    sleep $delay1
     waitAndClick('a[href="#/pages/"]')
   end
 
@@ -169,7 +190,7 @@ if ENV["ADB_DEVICE_ARG"].nil?
     waitAndClick('a[href="#/tags/"]')
     waitTo('a[href="#/tags/new/"]')
     waitAndClick("a[title=\"List posts tagged with '"+ tagName +"'\"]")
-    sleep 0.5
+    sleep $delay1
     waitTo('a > h3')
     element = @driver.find_elements(css: 'a > h3').select {|el| el.text == postTitle }.first
     assert(element.text == postTitle)
@@ -178,7 +199,7 @@ if ENV["ADB_DEVICE_ARG"].nil?
   Then(/^I validate that tag "(.*?)" is associate with a page$/) do |tagName|
     waitAndClick('a[href="#/tags/"]')
     waitTo('a[href="#/tags/new/"]')
-    sleep 0.5
+    sleep $delay1
     waitTo("a[title=\"List posts tagged with '"+ tagName +"'\"] > span")
     element = @driver.find_elements(css: "a[title=\"List posts tagged with '"+ tagName +"'\"] > span").select {|el| el.text == '1 post' }.first
     assert(element.text == '1 post')
@@ -190,21 +211,21 @@ if ENV["ADB_DEVICE_ARG"].nil?
     element = @driver.find_elements(css: 'a > h3').select {|el| el.text == postTitle }.first
     element.click
     waitAndClick('button.post-settings')
-    sleep 0.5
+    sleep $delay1
     element = @driver.find_element(id: 'tag-input')
     element.send_keys :backspace
     waitAndClick('button.close')
     waitAndClick('div.gh-publishmenu-trigger')
-    sleep 1
+    sleep $delay2
     waitAndClick('button.gh-publishmenu-button')
-    sleep 0.5
+    sleep $delay1
     waitAndClick('a[href="#/posts/"]')
   end
 
   Then(/^I check that tag "(.*?)" don't have any post related$/) do |tagName|
     waitAndClick('a[href="#/tags/"]')
     waitTo('a[href="#/tags/new/"]')
-    sleep 0.5
+    sleep $delay1
     waitTo('a > span')
     element = @driver.find_elements(css: 'a > span').select {|el| el.text == '0 posts' }.first
     assert(element.text == '0 posts')

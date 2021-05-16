@@ -1,6 +1,7 @@
 {
   "@user1": {
       "EMAIL":"suusuario",
-      "PASSWORD": "sucontraseña"
+      "PASSWORD": "sucontraseña",
+      "VERSION": "3.3.0"
   }
 }
