@@ -2,7 +2,7 @@ Feature: Tag association (Case 2)
 
   @user1 @web
   Scenario: Associate 3 tags to a post
-    Given I have a version "<VERSION>"
+    Given I have a version "3.3.0"
     When I log in ghost local app as an administrator with this user "<EMAIL>" and password "<PASSWORD>"
     Then I create a tag with the name  "testtag1", and the description "This is the tag 1"
     Then I create a tag with the name  "testtag2", and the description "This is the tag 2"

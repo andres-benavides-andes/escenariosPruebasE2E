@@ -154,7 +154,7 @@ Para ejecutar pruebas de regresion valla a la carpeta "resemble-script" y ejecut
 npm install
 ```
 
-Esto instalara todas las dependencias de node js requeridas para ejecutar el script de pruebas de regresion. Posterior a esto, al script se le deben suministrar las direcciones de las carpetas con las fotos para hacer las comparaciones y mostrar los resultados. Se debe modificar el parametro "regressionCases" del archivo config.json que se encuentra en la misma carpeta. A continuacion, se muestra un ejemplo de como debera quedar para hacer las pruebas.
+Esto instalara todas las dependencias de node js requeridas para ejecutar el script de pruebas de regresion. Posterior a esto, al script se le deben suministrar las direcciones de las carpetas con las fotos para hacer las comparaciones y mostrar los resultados. El archivo "config.json" describe la configuracion por defecto de las pruebas. A continuacion se muestra su contenido por defecto:
 ```
 {
     "options":{
@@ -172,37 +172,18 @@ Esto instalara todas las dependencias de node js requeridas para ejecutar el scr
         "scaleToSameSize": true,
         "ignore": "antialiasing"
     },
-    "regressionCases": [
-        {
-            "feature": "Tag Association",
-            "scenario": "Associate 3 tags to a post",
-            "before":"../tvr/3.3.0/Associate 3 tags to a post",
-            "after":"../tvr/3.42.5/Associate 3 tags to a post"
-        },
-        {
-            "feature":"Tag Association",
-            "scenario": "Assosiate a tag to 2 posts",
-            "before": "../tvr/3.3.0/Assosiate a tag to 2 posts",
-            "after": "../tvr/3.42.5/Assosiate a tag to 2 posts"
-        }
-    ]
+    "before": "../tvr/3.3.0",
+    "after" : "../tvr/3.42.5",
+    "result": "../tvr/result"
 }
 ```
-En el caso anterior, el archivo se configuro para hacer pruebas de regresion sobre las imagenes generadas por los esenarios "Associate 3 tags to a post" y "Associate a tag to 2 posts". Note que el parametro "regressionCases" es un arreglo, lo cual hace eque en un mismo reporte se puedan mostar multiples esenarios. Puede remover los que ya se encuentran sobre el archivo, y agregar nuevos usando la siguiente estructura:
-```
-    "regressionCases":[
-      ...
-        {
-            "feature": "<feature_name>",
-            "scenario": "<scenario-name>",
-            "before":"<path-to-referen-images>",
-            "after":"<path-to-images-of-new-app-version>"
-        },
-        ...
-    ]
-```
-Fijese que las direcciones de las carpetas con las imagenes a comparar, son relativas a la carpate "resemble-script". Una vez configurado el archivo config.json con los casos a hacer regresion, ejecute el siguiente comando:
+En el archivo "config.json" podra hacer las siguientes modificaciones: 
+* Si se desea cambiar la ruta de las imagenes de referencia, se debe modificar la direccion escrita en el parametro "before". 
+* Si se desea cambiar la ruta de las imagenes de la version de la aplicacion en prueba, modifique la ruta descrita por el parametro "after". 
+* Si desea cambiar la ruta para guardar los resultados, modifique la ruta descrita por el parametro "result". 
+
+Un vez configurada la prueba, ejecutar el siguiente comando:
 ```
 node index.js
 ```
-Espere a que el comando termine su ejecucion. Una vez completada su ejecucion, se deberia haber generado el archivo "report.html", el cual contendra el la informacion del reporte. Proceda a abrirlo en un buscador.
+Espere a que el comando termine su ejecucion. Una vez completada su ejecucion, se deberia haber generado el archivo "report.html" en la ruta desaignada por el parametro "result" definido en el archivo "config.js", el cual contendra el la informacion del reporte. Proceda a abrirlo en un buscador.
