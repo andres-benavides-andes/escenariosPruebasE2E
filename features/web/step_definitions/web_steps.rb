@@ -2,6 +2,11 @@ if ENV["ADB_DEVICE_ARG"].nil?
   require 'kraken-mobile/steps/web/kraken_steps'
   require "selenium-webdriver"
 
+  Before do |scenario|
+    $featurescenariostep = scenario.name
+    $id = 0
+  end
+  
   Then(
     /^I select option with value "(.*?)" for dropdown having css selector "(.*?)"$/
   ) do |op_value, sel_id|

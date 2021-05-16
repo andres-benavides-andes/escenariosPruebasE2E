@@ -1,6 +1,7 @@
 Feature: Función programar publicación de una página
   @user1 @web
   Scenario: Programar publicación de una página
+    Given I have a version "<VERSION_APP>"
     Given I navigate to page "http://localhost:2368/ghost/"
     Then I enter "<EMAIL>" into input field having css selector "input[name='identification']"
     Then I enter "<PASSWORD>" into input field having css selector "input[name='password']"
