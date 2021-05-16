@@ -28,6 +28,11 @@ if ENV["ADB_DEVICE_ARG"].nil?
     $versionapp = versionapp
   end
 
+  Before do |scenario|
+    $featurescenariostep = scenario.name
+    $id = 0
+  end
+
   AfterStep do |_scenario|
     if $id > 0
       Dir.mkdir("./tvr") unless File.exist?("./tvr")
