@@ -1,0 +1,32 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../../creaar_un_post/mierda_Creaar_un_post_0_document_0_default.png",
+        "test": "../bitmaps_test/20210516-171329/mierda_Creaar_un_post_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "mierda_Creaar_un_post_0_document_0_default.png",
+        "label": "Creaar un post",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./creaar_un_post/Creaar un post_3.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": -242,
+            "height": 10
+          },
+          "misMatchPercentage": "44.51",
+          "analysisTime": 53
+        },
+        "diffImage": "../bitmaps_test/20210516-171329/failed_diff_mierda_Creaar_un_post_0_document_0_default.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "mierda"
+}

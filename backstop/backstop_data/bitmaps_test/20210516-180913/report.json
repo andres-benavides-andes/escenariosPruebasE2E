@@ -1,0 +1,58 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../../creaar_un_post/Pruebasderegresion_Creaar_un_post_0_document_0_default.png",
+        "test": "../bitmaps_test/20210516-180913/Pruebasderegresion_Creaar_un_post_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "Pruebasderegresion_Creaar_un_post_0_document_0_default.png",
+        "label": "Creaar un post",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./3.42.5/Creaar un post/Creaar un post_5.png",
+        "referenceUrl": "./3.3.0/Creaar un post/Creaar un post_5.png",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "4.33",
+          "analysisTime": 31
+        },
+        "diffImage": "../bitmaps_test/20210516-180913/failed_diff_Pruebasderegresion_Creaar_un_post_0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../creaar_un_post/Pruebasderegresion_Creaar_un_post_0_document_0_default.png",
+        "test": "../bitmaps_test/20210516-180913/Pruebasderegresion_Creaar_un_post_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "Pruebasderegresion_Creaar_un_post_0_document_0_default.png",
+        "label": "Creaar un post",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./3.42.5/Creaar un post/Creaar un post_6.png",
+        "referenceUrl": "./3.3.0/Creaar un post/Creaar un post_6.png",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "4.33",
+          "analysisTime": 30
+        },
+        "diffImage": "../bitmaps_test/20210516-180913/failed_diff_Pruebasderegresion_Creaar_un_post_0_document_0_default.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "Pruebas de regresion"
+}
