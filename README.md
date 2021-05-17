@@ -6,6 +6,7 @@ Issues:  [aquí](https://github.com/andres-benavides-andes/escenariosPruebasE2E/
 
 Notas: 
 - Ejecutar los pasos en el orden mencionado
+- No hubo necesidad de crear dos archivos para pruebas entre versiones porque con las modificaciones realizadas, quedaron funcionando para las dos versiones.
 - Este repositorio se debe clonar en el mismo nivel de la ubicacion donde esta el directorio de Kraken-mobil
 - Despues de clonar el repositorio se debe ingresar a la carpeta y ejecutar el comando bundle install
 - Antes de ejecutar la toma de fotos de las versiones, ingrese a Ghost y cierre la recomendación de actualización que se muestra en la parte superior.
@@ -60,6 +61,9 @@ Ejecutar el comando backstop reference
 
 Ejecutar el comando backstop test, este abrira el reporte html generado por la herramienta
 
+## Comentarios generales relacionados con la ejecución de pruebas de regresión
+
+Como se podría fijar en la ejecución del script basado en resemble, la prueba de regresión se hizo para todos los escenarios y funciones descritas en este te documento. Solo la prueba de backstop se hizo para casos puntuales. También se validó que los escenarios corren en ambas versiones de ghost que están bajo pruebas (3.3.0 y 3.42.5), por lo que no fue necesario replicar escenarios para una versión en específico. Todos los escenarios fueron modificados para tomar screenshots de forma automática, acorde a lo requerido.
 
 # Equipo
 
@@ -69,16 +73,6 @@ Ejecutar el comando backstop test, este abrira el reporte html generado por la h
 | Anderson Luis Cáceres Padilla         | al.caceres@uniandes.edu.co    |
 | Andres Benavides                      | f.benavidesv@uniandes.edu.co  |
 | Anderson Steve Santamaría Ballesteros | as.santamaria@uniandes.edu.co |
-
-# Ejecutar las pruebas
-
-Primero editar el archivo: ./config.json y poner las credenciales del usuario de ghost local
-
-Luego ejecutar este comado:
-
-```
-bundle exec kraken-mobile run --properties=config.json
-```
 
 # Funcionalidades Core
 
