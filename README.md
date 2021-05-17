@@ -1,14 +1,60 @@
 # Requerimientos de ejecucion
 
-Se debe tener corriendo localmente a ghost en la direccion http://localhost:2368/
+Notas: 
+- Ejecutar los pasos en el orden mencionado
+- Este repositorio se debe clonar en el mismo nivel de la ubicacion donde esta el directorio de Kraken-mobil
+- Despues de clonar el repositorio se debe ingresar a la carpeta y ejecutar el comando bundle install
+- Antes de ejecutar la toma de fotos de las versiones, ingrese a Ghost y cierre la recomendación de actualización que se muestra en la parte superior.
 
-Se debe modificar el archivo config.json con el email y la password del usuario administrador del ghost en ejecucion
+## 1. Toma de fotos Ghost 3.3.0
+
+Se debe tener corriendo localmente a ghost con la versión 3.3.0 en la direccion http://localhost:2368/
+
+Se debe modificar el archivo config-3.3.0.json con el email y la password del usuario administrador del ghost en ejecucion
 
 El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
 
-Este repositorio se debe clonar en el mismo nivel de la ubicacion donde esta el directorio de Kraken-mobil
+Ejecutar el comando bundle exec kraken-mobile run --properties=config-3.3.0.json
 
-Despues de clonar el repositorio se debe ingresar a la carpeta y ejecutar el comando bundle install
+Ejecutar el comando ghost stop
+
+Ir a la raíz del repo y en la carpeta tvr/3.3.0 estarán las fotos de los pasos de las pruebas por escenario
+
+## 2. Toma de fotos Ghost 3.42.5
+
+Se debe tener corriendo localmente a ghost con la versión 3.42.5 en la direccion http://localhost:2368/
+
+Se debe modificar el archivo config-3.42.5.json con el email y la password del usuario administrador del ghost en ejecucion
+
+El entorno local de Kraken-mobil debe configurarse acorde a la rubrica mencionada en la clase
+
+Ejecutar el comando bundle exec kraken-mobile run --properties=config-3.42.5.json
+
+Ejecutar el comando ghost stop
+
+Ir a la raíz del repo y en la carpeta tvr/3.42.5 estarán las fotos de los pasos de las pruebas por escenario
+
+## 3. Comaparación con resemble
+
+Estando en la raíz del repo, ingresar a la carpeta resemble-script
+
+El entorno local de resemble debe configurarse acorde a la rubrica mencionada en la clase
+
+Ejecutar el comando npm i para instalar dependencias
+
+Ejecutar el comando node index.js
+
+Ir a la raíz del repo y en la carpeta tvr/result estarán las fotos de comparación y el reporte html generado automáticamente
+
+## 4. Comaparación con backstop
+
+Estando en la raíz del repo, ingresar a la carpeta backstop
+
+El entorno local de backstop debe configurarse acorde a la rubrica mencionada en la clase
+
+Ejecutar el comando backstop reference
+
+Ejecutar el comando backstop test, este abrira el reporte html generado por la herramienta
 
 
 # Equipo
