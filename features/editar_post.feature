@@ -15,6 +15,6 @@ Feature: Funcion editar post
     Then I click on element having css selector ".gh-publishmenu"
     Then I click on element having css selector ".gh-publishmenu-button"
     Then I wait for 5 seconds
-    Then I click on element having css selector ".gh-editor-back-button"
+    Then I click on element having css selector "a[href='#/posts/'].blue.link.fw4.flex"
     Then I wait for 1 seconds
     Then I should see text "Posts"

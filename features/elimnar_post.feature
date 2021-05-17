@@ -8,7 +8,7 @@ Feature: Funcion elminar post
     Then I click on element having css selector "button[type='submit']"
     Then I click on element having css selector "a[href='#/posts/']"
     Then I click on element having css selector ".gh-posts-list-item:nth-child(2)"
-    Then I click on element having css selector ".gh-actions-cog"
+    Then I click on element having css selector ".post-settings"
     Then I wait for 3 seconds
     Then I click on element having css selector ".settings-menu-delete-button"
     Then I click on element having css selector ".gh-btn-red"
