@@ -2,7 +2,7 @@ Feature: Tag association (Case 3)
 
   @user1 @web
   Scenario: Detach a tag from a post
-    Given I have a version "3.3.0"
+    Given I have a version "<VERSION_APP>"
     When I log in ghost local app as an administrator with this user "<EMAIL>" and password "<PASSWORD>"
     Then I create a tag with the name  "testtag", and the description "This is a sample tast"
     Then I create a draf post with the title "My testing"

@@ -1,6 +1,7 @@
 Feature: Funcion crear post/crear post
   @user1 @web
   Scenario: Creaar un post
+    Given I have a version "<VERSION_APP>"
     Given I navigate to page "http://localhost:2368/ghost/"
     Then I enter "<EMAIL>" into input field having id "ember8"
     Then I enter "<PASSWORD>" into input field having id "ember10"

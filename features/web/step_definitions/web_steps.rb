@@ -75,7 +75,7 @@ if ENV["ADB_DEVICE_ARG"].nil?
     clickOn(css_selector)
   end
 
-  When(/^I log in ghost local app as an administrator with this user "(.*?)" and password "(.*?)"$/) do |userName, password|
+  When(/^I log in ghost local app as an administrator with this user "([^\"]*)" and password "([^\"]*)"$/) do |userName, password|
     @driver.navigate.to "http://localhost:2368/ghost/#/signin"
     waitTo('input[name="identification"]')
     fill_a_text_field('input[name="identification"]', userName )

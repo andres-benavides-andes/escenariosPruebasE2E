@@ -2,10 +2,7 @@ Feature: Función ver preview de una página
   @user1 @web
   Scenario: Ver preview de una página
     Given I have a version "<VERSION_APP>"
-    Given I navigate to page "http://localhost:2368/ghost/"
-    Then I enter "<EMAIL>" into input field having css selector "input[name='identification']"
-    Then I enter "<PASSWORD>" into input field having css selector "input[name='password']"
-    Then I click on element having css selector "button[type='submit']"
+    When I log in ghost local app as an administrator with this user "<EMAIL>" and password "<PASSWORD>"
     Then I click on element having css selector "a[href='#/pages/']"
     Then I click on element having css selector "a[href='#/editor/page/']"
     Then I enter "Ver preview de página con KRAKEN" into input field having css selector ".gh-editor-title"
