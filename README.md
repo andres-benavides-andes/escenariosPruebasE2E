@@ -6,6 +6,7 @@ Issues:  [aquí](https://github.com/andres-benavides-andes/escenariosPruebasE2E/
 
 Notas: 
 - Ejecutar los pasos en el orden mencionado
+- No hubo necesidad de crear dos archivos para pruebas entre versiones porque con las modificaciones realizadas, quedaron funcionando para las dos versiones.
 - Este repositorio se debe clonar en el mismo nivel de la ubicacion donde esta el directorio de Kraken-mobil
 - Despues de clonar el repositorio se debe ingresar a la carpeta y ejecutar el comando bundle install
 - Antes de ejecutar la toma de fotos de las versiones, ingrese a Ghost y cierre la recomendación de actualización que se muestra en la parte superior.
