@@ -40,7 +40,7 @@ async function executeTest(){
       let file = files_3_3_0[i][j+1];
       let beforeImage = `${before}/${files_3_3_0[i][j]}/${files_3_3_0[i][j+1]}`;
       let afterImage = `${after}/${files_3_42_5[i][j]}/${files_3_42_5[i][j+1]}`;
-      let compareImage = `${result}/compare-${files_3_3_0[i][j+1]}}`;
+      let compareImage = `${result}/compare-${files_3_3_0[i][j+1]}`;
       const data = await compareImages(
         fs.readFileSync(beforeImage),
         fs.readFileSync(afterImage),
