@@ -7,7 +7,7 @@ Feature: Funcion despublicar post
     Then I enter "<PASSWORD>" into input field having css selector "input[name='password']"
     Then I click on element having css selector "button[type='submit']"
     Then I click on element having css selector "a[href='#/posts/']"
-    Then I click on element having css selector ".gh-posts-list-item:nth-child(2)"
+    Then I click on element having css selector ".gh-posts-list-item:nth-child(7)"
     Then I enter "Editar post con KRAKEN" into input field having css selector ".gh-editor-title"
     Then I enter "Cuerpo del mensaje de prueba editada" into input field having css selector ".koenig-editor__editor p" 
     Then I wait for 2 seconds
