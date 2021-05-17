@@ -1,5 +1,7 @@
 # Requerimientos de ejecucion
 
+Issues:  https://github.com/andres-benavides-andes/escenariosPruebasE2E/issues
+
 Notas: 
 - Ejecutar los pasos en el orden mencionado
 - Este repositorio se debe clonar en el mismo nivel de la ubicacion donde esta el directorio de Kraken-mobil
