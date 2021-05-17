@@ -70,16 +70,6 @@ Ejecutar el comando backstop test, este abrira el reporte html generado por la h
 | Andres Benavides                      | f.benavidesv@uniandes.edu.co  |
 | Anderson Steve Santamaría Ballesteros | as.santamaria@uniandes.edu.co |
 
-# Ejecutar las pruebas
-
-Primero editar el archivo: ./config.json y poner las credenciales del usuario de ghost local
-
-Luego ejecutar este comado:
-
-```
-bundle exec kraken-mobile run --properties=config.json
-```
-
 # Funcionalidades Core
 
 ## Funcionalidad Asociar TAG
