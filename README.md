@@ -61,6 +61,9 @@ Ejecutar el comando backstop reference
 
 Ejecutar el comando backstop test, este abrira el reporte html generado por la herramienta
 
+## Comentarios generales relacionados con la ejecución de pruebas de regresión
+
+Como se podría fijar en la ejecución del script basado en resemble, la prueba de regresión se hizo para todos los escenarios y funciones descritas en este te documento. Solo la prueba de backstop se hizo para casos puntuales. También se validó que los escenarios corren en ambas versiones de ghost que están bajo pruebas (3.3.0 y 3.42.5), por lo que no fue necesario replicar escenarios para una versión en específico. Todos los escenarios fueron modificados para tomar screenshots de forma automática, acorde a lo requerido.
 
 # Equipo
 
